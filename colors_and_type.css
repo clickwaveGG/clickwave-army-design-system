@@ -1,0 +1,215 @@
+/* ─────────────────────────────────────────────────────────────
+   ClickWave Army — Colors & Type
+   Extracted from clickwavearmy.com + design system v1.0
+   Dark-first. Militar. Contido.
+   ───────────────────────────────────────────────────────────── */
+
+/* Fonts — Google Fonts (canonical) */
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+
+:root {
+  /* ── Core palette ─────────────────────────────── */
+  --color-brand-black:    #0A0A0A;
+  --color-brand-gray:     #1F1F1F;
+  --color-brand-orange:   #FF3300;
+  --color-white:          #FFFFFF;
+
+  /* ── Accents (service chips) ──────────────────── */
+  --color-accent-purple:  #7C3AED;   /* Web Design */
+  --color-accent-cyan:    #0EA5E9;   /* Vídeo & Conteúdo */
+  --color-accent-green:   #10B981;   /* Status ATIVO */
+
+  /* ── Semantic ─────────────────────────────────── */
+  --color-bg:             var(--color-brand-black);
+  --color-bg-elevated:    var(--color-brand-gray);
+
+  --fg1:                  var(--color-white);               /* primary text */
+  --fg2:                  rgba(255,255,255,0.70);           /* body */
+  --fg3:                  rgba(255,255,255,0.60);           /* mono labels */
+  --fg4:                  rgba(255,255,255,0.40);           /* dividers, dots */
+
+  --color-border-subtle:  rgba(255,255,255,0.05);
+  --color-border-default: rgba(255,255,255,0.10);
+  --color-border-strong:  rgba(255,255,255,0.20);
+
+  --color-surface-0:      rgba(255,255,255,0.03);
+  --color-surface-1:      rgba(255,255,255,0.05);
+  --color-surface-2:      rgba(255,255,255,0.08);
+  --color-surface-3:      rgba(255,255,255,0.10);
+
+  /* ── Brand action (orange) ───────────────────── */
+  --color-action:         var(--color-brand-orange);
+  --color-action-hover:   #FF5722;
+  --color-action-glow:    rgba(255,51,0,0.35);
+  --color-action-ambient: rgba(255,51,0,0.12);
+  --color-action-soft:    rgba(255,51,0,0.10);
+  --color-action-dim:     rgba(255,51,0,0.60);
+
+  /* ── Status ───────────────────────────────────── */
+  --color-status-active:  var(--color-accent-green);
+  --color-status-warn:    #F59E0B;
+  --color-status-danger:  #EF4444;
+
+  /* ── Fonts ────────────────────────────────────── */
+  --font-display: 'Playfair Display', ui-serif, Georgia, serif;
+  --font-sans:    'Inter', ui-sans-serif, system-ui, -apple-system, sans-serif;
+  --font-mono:    'JetBrains Mono', ui-monospace, SFMono-Regular, Menlo, monospace;
+
+  /* ── Type scale ───────────────────────────────── */
+  --text-2xs:  0.625rem;   /* 10px */
+  --text-xs:   0.75rem;    /* 12px */
+  --text-sm:   0.875rem;   /* 14px */
+  --text-base: 1rem;       /* 16px */
+  --text-lg:   1.125rem;   /* 18px */
+  --text-xl:   1.5rem;     /* 24px */
+  --text-2xl:  1.875rem;   /* 30px */
+  --text-3xl:  2.25rem;    /* 36px */
+  --text-4xl:  3rem;       /* 48px */
+  --text-5xl:  3.75rem;    /* 60px — hero desktop */
+  --text-6xl:  4.5rem;     /* 72px */
+
+  /* ── Spacing (4px grid) ───────────────────────── */
+  --space-1:  0.25rem;
+  --space-2:  0.5rem;
+  --space-3:  0.75rem;
+  --space-4:  1rem;
+  --space-5:  1.25rem;
+  --space-6:  1.5rem;
+  --space-8:  2rem;
+  --space-10: 2.5rem;
+  --space-12: 3rem;
+  --space-16: 4rem;
+  --space-20: 5rem;
+  --space-24: 6rem;
+  --space-32: 8rem;
+
+  --section-py-mobile:  var(--space-12);
+  --section-py-desktop: var(--space-24);
+  --section-px:         var(--space-6);
+
+  /* ── Radii ────────────────────────────────────── */
+  --radius-xs:   0.25rem;   /*  4px */
+  --radius-sm:   0.5rem;    /*  8px */
+  --radius-md:   1rem;      /* 16px — botões secundários, step cards */
+  --radius-lg:   1.5rem;    /* 24px */
+  --radius-xl:   2rem;      /* 32px — cards glass */
+  --radius-full: 9999px;    /* pill — CTA, nav, chips */
+
+  /* ── Shadows / glow ───────────────────────────── */
+  --shadow-card:      0 10px 15px -3px rgba(0,0,0,0.1), 0 4px 6px -4px rgba(0,0,0,0.1);
+  --shadow-deep:      0 0 20px 0 rgba(0,0,0,0.5);
+  --shadow-cta-rest:  0 0 40px 0 rgba(255,87,34,0.2);
+  --shadow-cta-hover: 0 0 30px 0 rgba(255,51,0,0.35);
+  --shadow-cta-ambi:  0 0 60px 0 rgba(255,51,0,0.12);
+  --shadow-pulse:     0 0 12px 4px rgba(255,51,0,0.5);
+
+  /* ── Blur ─────────────────────────────────────── */
+  --blur-card:   blur(24px);
+  --blur-nav:    blur(12px);
+  --blur-subtle: blur(8px);
+
+  /* ── Motion ───────────────────────────────────── */
+  --duration-fast: 150ms;
+  --duration-base: 300ms;
+  --duration-slow: 500ms;
+  --duration-epic: 800ms;
+
+  --ease-out:      cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out:   cubic-bezier(0.4, 0, 0.6, 1);
+  --ease-decisive: cubic-bezier(0.7, 0, 0.3, 1);
+
+  --anim-spin:            15s;
+  --anim-pulse:           2s;
+  --anim-infinite-scroll: 40s;
+}
+
+/* ─── Semantic type classes ──────────────────────── */
+
+.type-hero {
+  font-family: var(--font-display);
+  font-size: clamp(2.25rem, 6vw + 0.5rem, 3.75rem);
+  line-height: 1;
+  letter-spacing: -1.5px;
+  font-weight: 400;
+  color: var(--fg1);
+}
+
+.type-h1 {
+  font-family: var(--font-display);
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  line-height: 1.05;
+  letter-spacing: -1.2px;
+  font-weight: 400;
+  color: var(--fg1);
+}
+
+.type-h2 {
+  font-family: var(--font-display);
+  font-size: clamp(1.875rem, 4vw, 3rem);
+  line-height: 1.05;
+  letter-spacing: -1px;
+  font-weight: 400;
+  color: var(--fg1);
+}
+
+.type-h3 {
+  font-family: var(--font-display);
+  font-size: 1.5rem;
+  line-height: 1.33;
+  font-weight: 400;
+  color: var(--fg1);
+}
+
+.type-label,
+.type-mono {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  line-height: 1.625;
+  letter-spacing: 0.35px;
+  text-transform: uppercase;
+  color: var(--fg3);
+}
+
+.type-body {
+  font-family: var(--font-sans);
+  font-size: 1rem;
+  line-height: 1.6;
+  color: var(--fg2);
+}
+
+.type-body-sm {
+  font-family: var(--font-sans);
+  font-size: 0.875rem;
+  line-height: 1.55;
+  color: var(--fg2);
+}
+
+.type-cta {
+  font-family: var(--font-mono);
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 1.6px;
+  text-transform: uppercase;
+  color: var(--color-white);
+}
+
+/* ── Reduced motion ──────────────────────────── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* ── Named animations (canonical) ────────────── */
+@keyframes pulse        { 0%, 100% { opacity: 1 } 50% { opacity: 0.5 } }
+@keyframes spin         { to { transform: rotate(360deg) } }
+@keyframes infinite-scroll {
+  from { transform: translateX(0) }
+  to   { transform: translateX(-50%) }
+}
+@keyframes glow-pulse {
+  0%, 100% { box-shadow: 0 0 20px rgba(255,51,0,0.3) }
+  50%      { box-shadow: 0 0 40px rgba(255,51,0,0.6) }
+}

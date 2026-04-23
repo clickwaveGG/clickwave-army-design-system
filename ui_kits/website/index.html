@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>ClickWave Army — UI Kit</title>
+  <link rel="stylesheet" href="../../colors_and_type.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a href="#hero" class="sr-only" style="position:absolute;left:-9999px">Pular para conteúdo</a>
+  <div id="root" class="site"></div>
+
+  <script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+
+  <script type="text/babel" src="Button.jsx"></script>
+  <script type="text/babel" src="Badge.jsx"></script>
+  <script type="text/babel" src="CardGlass.jsx"></script>
+  <script type="text/babel" src="NavPill.jsx"></script>
+  <script type="text/babel" src="SectionHead.jsx"></script>
+  <script type="text/babel" src="MissionCard.jsx"></script>
+  <script type="text/babel" src="ArsenalCard.jsx"></script>
+  <script type="text/babel" src="Hero.jsx"></script>
+  <script type="text/babel" src="StepCard.jsx"></script>
+  <script type="text/babel" src="TeamCard.jsx"></script>
+  <script type="text/babel" src="ServiceCard.jsx"></script>
+  <script type="text/babel" src="LogoMarquee.jsx"></script>
+  <script type="text/babel" src="Footer.jsx"></script>
+
+  <script type="text/babel">
+    const TEAM = [
+      { name: 'Pedro Dourado', rank: 'General · Fundador',    duty: 'Estratégia + Tráfego pago', initials: 'PD' },
+      { name: 'Leonardo',      rank: 'Coronel · Co-fundador', duty: 'Web Design + Estratégia',  initials: 'LC' },
+      { name: 'João Victor',   rank: 'Videomaker',            duty: 'Edição de vídeo',          initials: 'JV' },
+      { name: 'Kauan Cabral',  rank: 'Automações',            duty: 'n8n + sistemas',           initials: 'KC' },
+    ];
+
+    const STEPS = [
+      { n: '01', t: 'A Oferta Irresistível', b: 'Aumentamos o valor percebido até o mercado obedecer. Posicionamento antes de qualquer tiro.' },
+      { n: '02', t: 'Artilharia de Tráfego', b: 'Incursões cirúrgicas em canais pagos. Zero desperdício, dominância por volume.' },
+      { n: '03', t: 'Copy Bélico',           b: 'Cada palavra tem alvo. Cada frase é um disparo. Conversão como objetivo único.' },
+      { n: '04', t: 'Dominância Sustentada', b: 'Reentrada tática, retargeting, expansão. A operação não para.' },
+    ];
+
+    const SERVICES = [
+      { n: '01', v: 'purple', t: 'Design de Impacto',  b: 'Identidade visual que impõe respeito antes do primeiro clique.' },
+      { n: '02', v: 'orange', t: 'Tráfego de Elite',   b: 'Mídia paga de precisão militar. Aquisição previsível e escalável.', featured: true },
+      { n: '03', v: 'cyan',   t: 'Vídeo & Conteúdo',   b: 'Narrativa em movimento. Prova social cinematográfica.' },
+    ];
+
+    const App = () => (
+      <div>
+        <Hero />
+
+        <section className="section" id="como-funciona">
+          <div className="section-inner">
+            <SectionHead kicker="Como Funciona" title={<>Quatro passos. <em>Uma operação.</em></>} index={1} total={4} />
+            <div className="steps-grid">
+              {STEPS.map((s, i) => (
+                <StepCard key={s.n} number={s.n} title={s.t} body={s.b} last={i === STEPS.length - 1} />
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="section" id="servicos">
+          <div className="section-inner">
+            <SectionHead kicker="Nossos Serviços" title={<>O <em>arsenal</em> completo.</>} index={2} total={4} />
+            <div className="services-grid">
+              {SERVICES.map((s) => (
+                <ServiceCard key={s.n} number={s.n} variant={s.v} title={s.t} body={s.b} featured={s.featured} />
+              ))}
+            </div>
+          </div>
+        </section>
+
+        <section className="section" id="sobre">
+          <div className="section-inner">
+            <SectionHead kicker="Nosso Exército" title={<>Os <em>comandantes.</em></>} index={3} total={4} />
+            <div className="team-grid">
+              {TEAM.map((m) => <TeamCard key={m.name} {...m} />)}
+            </div>
+          </div>
+        </section>
+
+        <section className="section" id="clientes">
+          <div className="section-inner">
+            <SectionHead kicker="Linha de Frente" title={<>Marcas em <em>operação</em> conosco.</>} index={4} total={4} />
+            <LogoMarquee />
+          </div>
+        </section>
+
+        <Footer />
+      </div>
+    );
+
+    ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+  </script>
+</body>
+</html>

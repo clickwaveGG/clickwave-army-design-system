@@ -1,0 +1,14 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8"><title>Motion</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>html,body{margin:0;background:#0A0A0A;color:#fff;padding:22px;display:grid;grid-template-columns:repeat(3,1fr);gap:16px;align-items:center;justify-items:center}
+.cell{display:flex;flex-direction:column;align-items:center;gap:10px}
+.dot{width:14px;height:14px;border-radius:50%;background:#10B981;box-shadow:0 0 12px 4px rgba(16,185,129,.5);animation:pulse 2s cubic-bezier(.4,0,.6,1) infinite}
+.spin{width:48px;height:48px;border:1.5px solid rgba(255,51,0,.4);border-top-color:#FF3300;border-radius:50%;animation:spin 3s linear infinite}
+.glow{width:100px;height:40px;border-radius:9999px;background:#FF3300;animation:glow-pulse 2.5s ease-in-out infinite;display:flex;align-items:center;justify-content:center;font-family:var(--font-mono);font-size:11px;letter-spacing:1.6px;text-transform:uppercase}
+.meta{font-family:var(--font-mono);font-size:10px;letter-spacing:.35px;text-transform:uppercase;color:var(--fg3);text-align:center}
+</style></head><body>
+<div class="cell"><div class="dot"></div><div class="meta">pulse · 2s<br>status ativo</div></div>
+<div class="cell"><div class="spin"></div><div class="meta">spin · 15s linear<br>reticles, markers</div></div>
+<div class="cell"><div class="glow">CTA</div><div class="meta">glow-pulse · 2.5s<br>featured ambient</div></div>
+</body></html>

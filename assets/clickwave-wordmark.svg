@@ -1,0 +1,8 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 36" width="200" height="36">
+  
+  <g transform="translate(0,6)">
+    <path class="cw-mark" d="M2 8 L14 20 L26 8 L21 8 L14 14 L7 8 Z"></path>
+    <path class="cw-mark" opacity="0.75" d="M7 4 L14 10 L21 4 L17 4 L14 6 L11 4 Z"></path>
+  </g>
+  <text class="cw-word" x="36" y="26">Clickwave</text>
+</svg>

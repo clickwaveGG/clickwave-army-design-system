@@ -1,0 +1,15 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8"><title>Shadows</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>html,body{margin:0;background:#0A0A0A;color:#fff;padding:30px 28px;display:grid;grid-template-columns:repeat(3,1fr);gap:30px;align-items:start}
+.box{padding:18px 22px;border-radius:9999px;background:#FF3300;color:#fff;font-family:var(--font-mono);font-size:13px;letter-spacing:1.6px;text-transform:uppercase;text-align:center}
+.rest{box-shadow:0 0 40px 0 rgba(255,87,34,.2)}
+.hover{box-shadow:0 0 30px 0 rgba(255,51,0,.35)}
+.ambi{box-shadow:0 0 60px 0 rgba(255,51,0,.12)}
+.card-ambi{padding:18px;border-radius:32px;background:rgba(255,255,255,.03);border:1px solid rgba(255,51,0,.3);color:#fff;font-family:var(--font-mono);font-size:11px;letter-spacing:.35px;text-transform:uppercase;box-shadow:0 0 60px 0 rgba(255,51,0,.12),inset 0 1px 0 rgba(255,51,0,.2);text-align:center}
+.meta{font-family:var(--font-mono);font-size:10px;letter-spacing:.35px;text-transform:uppercase;color:var(--fg4);margin-top:10px;text-align:center}
+</style></head><body>
+<div><div class="box rest">Rest</div><div class="meta">cta-rest · 0 0 40 rgba(255,87,34,.2)</div></div>
+<div><div class="box hover">Hover</div><div class="meta">cta-hover · 0 0 30 orange/35</div></div>
+<div><div class="card-ambi">★ Recomendado</div><div class="meta">cta-ambient · card featured</div></div>
+</body></html>

@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="pt-BR"><head><meta charset="utf-8"><title>Badges</title>
+<link rel="stylesheet" href="../colors_and_type.css">
+<style>html,body{margin:0;background:#0A0A0A;color:#fff;padding:22px;display:flex;flex-wrap:wrap;gap:10px;align-items:center}
+.badge{display:inline-flex;align-items:center;gap:8px;padding:5px 12px;border-radius:9999px;font-family:var(--font-mono);font-size:10px;letter-spacing:.35px;text-transform:uppercase;border:1px solid rgba(255,255,255,.1);background:rgba(255,255,255,.03);color:var(--fg2)}
+.badge--active{color:#10B981;border-color:rgba(16,185,129,.3);background:rgba(16,185,129,.1)}
+.badge--active::before{content:'';width:6px;height:6px;border-radius:50%;background:#10B981;animation:pulse 2s cubic-bezier(.4,0,.6,1) infinite}
+.badge--warn{color:#F59E0B;border-color:rgba(245,158,11,.3);background:rgba(245,158,11,.1)}
+.badge--orange{color:#FF3300;border-color:rgba(255,51,0,.3);background:rgba(255,51,0,.08)}
+.badge--mono{color:var(--fg3)}
+</style></head><body>
+<span class="badge badge--active">ATIVO</span>
+<span class="badge badge--mono">01/03</span>
+<span class="badge badge--mono">V.2.5</span>
+<span class="badge badge--warn">EM OPERAÇÃO</span>
+<span class="badge badge--orange">RECOMENDADO</span>
+<span class="badge badge--mono">CAPACIDADE: 100%</span>
+<span class="badge badge--mono">// PROTOCOLO CW-01</span>
+</body></html>
